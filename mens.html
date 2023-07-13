@@ -150,24 +150,16 @@
             </div>
         </div>
     </footer>
-
-    <script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // navbar.js
     $(document).ready(function() {
-        // Event listener for dropdown button
+        // Add event listener for dropdown button
         $('.dropbtn').on('click', function() {
             $('#dropdown-menu').toggleClass('show');
         });
 
-        // Function to change header style on scroll
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 50) { // adjust this value based on when you want the background to change
-                $('header').addClass('scrolled');
-            } else {
-                $('header').removeClass('scrolled');
-            }
-        });
-
-        // Function for nested dropdown menu
+        // Add the dropdown menu function here
         $('.dropdown-plus .dropbtn2').on('click', function(e) {
             e.preventDefault();
             $(this).next('.dropdown-content-nested').slideToggle();
@@ -176,6 +168,9 @@
     });
 
     </script>
+
+
+    
 </body>
 
 </html>
