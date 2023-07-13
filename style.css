@@ -601,6 +601,7 @@ footer {
     justify-content: center;
     bottom: 0;
     position: absolute;
+    z-index: 3;
 }
 
 footer .footer-info {
