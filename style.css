@@ -595,13 +595,12 @@ footer {
     padding: var(--common-padding);
     text-align: center;
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     bottom: 0;
     position: absolute;
-    z-index: 1;
 }
 
 footer .footer-info {
