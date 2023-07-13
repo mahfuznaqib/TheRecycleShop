@@ -153,4 +153,22 @@
         </div>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // navbar.js
+$(document).ready(function() {
+    // Add event listener for dropdown button
+    $('.dropbtn').on('click', function() {
+        $('#dropdown-menu').toggleClass('show');
+    });
+
+    // Add the dropdown menu function here
+    $('.dropdown-plus .dropbtn2').on('click', function(e) {
+        e.preventDefault();
+        $(this).next('.dropdown-content-nested').slideToggle();
+        $(this).toggleClass('minus'); // Toggle the 'minus' class
+    });
+});
+
+</script>
 </html>
