@@ -1,10 +1,17 @@
 /* FAQ body styling */
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .faq-container {
     max-width: 800px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
+    bottom: auto;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -12,6 +19,7 @@
     background-color: #f7f7f7;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 0 auto;
 }
 
 .faq-item {
@@ -49,6 +57,53 @@
 .faq-title:hover {
     color: #797776;
 }
+
+.more-questions {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.more-questions h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.more-questions p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.more-questions textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+.more-questions input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #f60; /* A shade of orange */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.more-questions input[type="submit"]:hover {
+    background-color: #f90; /* A lighter shade of orange for hover effect */
+}
+
 
 
 
