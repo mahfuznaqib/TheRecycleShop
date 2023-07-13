@@ -2,6 +2,7 @@
     font-size: 2.5em;
     text-align: center;
     color: #333; /* You can change this to any color from the combinations above */
+    margin-top: 150px; /* Add some spacing at the top */
     margin-bottom: 20px;
     padding: 10px;
     animation: colorChange 10s infinite;
