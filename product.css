@@ -1,0 +1,591 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    position: fixed;
+    background-color: transparent;
+    font-family: 'Arial', sans-serif;
+    z-index: 2;
+    width: 100%;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.website-title {
+    flex: 1;
+    display: flex;
+    align-items: left;
+}
+
+.website-title a {
+    font-family: 'Raleway', sans-serif;
+    color: #000; /* Change this to any color you want */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: left;
+    background-color: #f60; /* Add background color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add border-radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
+
+.website-title a:hover {
+    /* Add hover effects */
+    transform: scale(1.1); /* Increase size on hover */
+    background-color: #f90; /* Change background color on hover */
+    /* Add any other creative hover styles */
+}
+
+.nav-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-left ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+.nav-left ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-left ul li a:hover {
+    color: #ccc;
+}
+
+.nav-icons a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-icons img {
+    height: 20px;
+    width: auto;
+}
+
+.nav-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 40px; /* Add space between elements */
+    justify-content: space-between;
+}
+
+.nav-right ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Dropdown menu style */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown container (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align the dropdown menu to the right */
+    background-color: rgba(255, 255, 255, 0.8); /*semi - transparent white background */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px; /* Add padding to dropdown menu */
+    animation: fadeIn 0.3s ease-in-out; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change hover color for 'Products' link */
+.nav-right .dropdown:first-child:hover .dropbtn {
+    color: #f60; /* Change to a color of your choice */
+}
+
+/* Change font for 'Products' link */
+.nav-right .dropdown:first-child .dropbtn {
+    font-size: 1.5em; /* font size */
+    font-family: 'Arial', sans-serif; /* font of your choice */
+    color: #000; /* color of your choice */
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #fff;
+    background-color: #f60; /* Change to a color of your choice */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* logo*/
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.logo img:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Increase size on hover */
+    /* Add any other creative hover styles */
+}
+
+/* Add a dropdown icon */
+.nav-right .dropdown:first-child .dropbtn:after {
+    content: ''; /* no arrow */
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Styles for dropdown2 */
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown2 .dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin-right: 20px;
+}
+
+/* Styles for dropdown-content2 */
+.dropdown-content2 {
+    display: none;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0; /* Set to 0 to start from the top */
+    right: 0; /* Set to 0 to start from the right */
+    width: 25%; /* width of the dropdown content 2 */
+    height: 100%; /* Set to 100% to take full height */
+    background-color: #FFDAB9; 
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px; 
+    animation: fadeIn 0.3s ease-in-out;
+    border: none; 
+    overflow: hidden; /* Add this to enable scrolling if content overflows */
+    align-items: center; /* Align items to the center */
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+
+}
+
+.dropdown-content2 a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #444; /* Added border between links for a more defined look */
+}
+
+.dropdown-content2 a:last-child {
+    border-bottom: none; /* Remove border for the last link */
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown2 .dropbtn img {
+    width: 24px;
+    height: 24px;
+    border:none;
+}
+
+.btn-only{
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    max-height: 100vh; /* Adjust this value according to your needs */
+}
+
+/* Hover Effects on Links */
+.dropdown-content2-links a:hover {
+    background-color: #f60; /* Or any color you prefer */
+}
+
+/* Styles for dropdown2 menu header */
+.dropdown-content2-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Add some margin below the header */
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+}
+
+.dropdown-content2-header .logo {
+    display: inline-block;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+    width: 30%; /* Set width of logo */
+    position: relative; /* Added to keep logo in place when scrolling */
+    align-self: flex-start; /* Align logo to the left */
+    border: none;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.dropdown-content2-header .logo a {
+    display: inline-block;
+    text-decoration: none; /* Remove underline from the anchor tag */
+}
+
+.dropdown-content2-header .logo a:hover {
+    background-color: transparent; /* Remove background color change on hover */
+}
+
+.dropdown-content2-header .logo img {
+    max-width: 100%; /* Make sure the logo image scales nicely */
+    height: auto;
+    top: 20px;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.dropdown-content2-header .search {
+    flex-grow: 1; /* Allow the search bar to take remaining space */
+    margin-left: 20px; /* Add some space between the logo and search bar */
+    width: 50%; /* Set width of search bar */
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content2-header .search input {
+    width: 100%; /* Make the input take full width of the search bar */
+    padding: 10px; /* Add some padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add some border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    font-size: 14px;
+    transition: all 0.3s ease-out;
+}
+
+.dropdown-content2-header .search i {
+    margin-right: 10px; /* Add some space between the search icon and the search bar */
+}
+
+.dropdown-content2-header .search input:focus {
+    border-color: #333; /* Or any color you prefer */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Or any shadow effect you prefer */
+}
+
+/* dropdown-plus inside the dropdown 2 menu */
+
+.dropdown-plus {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #444; /* Added border between links for a more defined look */
+}
+
+.dropdown-plus .dropbtn2::after {
+    content: "-";
+    position: absolute;
+    right: 0;
+}
+
+.dropdown-plus .dropbtn2.minus::after {
+    content: "+";
+}
+
+.dropdown-content-nested {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content-nested a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: none; /* Remove border between links */
+}
+
+.dropdown-plus:hover .dropdown-content-nested {
+    display: block;
+}
+
+.dropdown-content2-footer {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+}
+
+.dropdown-content2-links a:last-child,
+.dropdown-content2-links a:nth-last-child(2) {
+    border-bottom: none;
+}
+
+.dropdown-content2-links a.faq:hover,
+.dropdown-content2-links a.return:hover {
+    background-color: transparent; /* Removes the background color on hover */
+    color: #f90; /* Changes the color of the text on hover */
+}
+
+
+/* nav bar media responsiveness */
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right ul li {
+        margin-bottom: 10px;
+    }
+
+    .nav-right ul li a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown-content, .dropdown-content2 {
+        position: static;
+        width: 100%;
+    }
+
+    .dropdown-content2 {
+        height: auto;
+    }
+
+    .dropdown-content2-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown-content2-header .search {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .dropdown-content2-header .search input {
+        width: 100%;
+    }
+}
+
+/* Product Styles*/
+
+.product-container {
+    display: flex;
+    flex-direction: column; /* Change from row to column for vertical layout */
+    align-items: center; /* Center the products */
+    margin: 20px;
+    gap: 20px; /* Add space between products */
+}
+
+.product {
+    width: 80%; /* Adjust as needed */
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    border-radius: 10px; /* Add border radius for a softer look */
+}
+
+.product:hover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.product-image {
+    width: 100%;
+    overflow: hidden; /* Add this to keep the image within the product box */
+    border-radius: 10px 10px 0 0; /* Round the top corners to match the product box */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Add transition for a smooth zoom effect */
+}
+
+.product-image img:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+.product-info {
+    text-align: center;
+    padding: 10px; /* Add some padding */
+}
+
+.product-info h1 {
+    margin: 10px 0; /* Add some margin */
+    color: #333; /* Change the color */
+    font-size: 1.5em; /* Increase the font size */
+}
+
+.product-info h2 {
+    color: #777; /* Change the color */
+    font-size: 1.2em;
+}
+
+.product-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555; /* Change the color */
+}
+
+.product-info input[type="button"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Add border radius */
+    font-size: 1.1em; /* Increase the font size */
+}
+
+.product-info input[type="button"]:hover {
+    background-color: #444;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    color: #333;
+    padding: var(--common-padding);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: relative;
+}
+
+footer .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    color: #797776;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+
+/* social media icons */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* social media icons */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
