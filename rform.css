@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.step_container {
+    margin-top: 50px;
+}
+
+.progress-bar {
+    margin-top: 50px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 2px solid #ff7f00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circle.visited-circle {
+    background-color: #ff7f00;
+    color: #fff;
+}
+
+.circle.current-circle {
+    border: 2px solid #ff7f00;
+}
+
+.vertical-line {
+    height: 20px;
+    border-left: 2px solid #ff7f00;
+    margin-left: 14px;
+}
+
+.vertical-line.visited-line {
+    border-left: 2px solid #ff7f00;
+}
+
+.vertical-line-dotted {
+    border-left: 2px dotted #ff7f00;
+    height: 20px;
+    margin-left: 14px;
+}
+
+.circle-dotted {
+    border: 2px dotted #ff7f00;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #ff7f00;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    min-height: 900px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group button {
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #e76f00;
+}
+
+.font-weight-bold {
+    margin-top: 70px;
+    text-align: center;
+    
+}
+

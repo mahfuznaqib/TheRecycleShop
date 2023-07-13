@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Returns and Refunds</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="recycle.ico" type="image/x-icon">
+    <link rel="stylesheet" href="rform.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <!-- Navbar goes here -->
+    <header>
+        <div class="nav-container">
+            <div class="website-title">
+                <a href="index.html"> The Recycle Shop </a>
+            </div>
+            <div class="logo">
+                <a href="index.html"><img src="https://i.imgur.com/KSsjSOY.png" alt="Your Company Logo"></a>
+            </div>
+            <nav class="nav-right">
+                <ul>
+                    <li class="dropdown">
+                        <a href="Product.html" class="dropbtn">PRODUCTS</a>
+                        <div class="dropdown-content">
+                            <a href="mens.html">Men</a>
+                            <a href="Women.html">Women</a>
+                            <a href="kids.html">Kids</a>
+                        </div>
+                    </li>
+                    <li><a href="login2.html"><img src="https://i.imgur.com/RdDOJUj.png" alt="Account"></a></li>
+                    <li><a href="cartpage.html"><img src="https://i.imgur.com/MD4bWil.png" alt="Shopping Cart"></a></li>
+                    <li class="dropdown2">
+                        <button class="dropbtn">
+                            <img src="https://i.imgur.com/wjydCtq.png" alt="Menu">
+                        </button>
+                        <div class="dropdown-content2">
+                            <div class="dropdown-content2-header">
+                                <a href="index.html" class="logo">
+                                    <img src="https://i.imgur.com/KSsjSOY.png" alt="Your Company Logo">
+                                </a>
+                                <div class="search">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" placeholder="Search...">
+                                </div>
+                            </div>
+                            <div class="dropdown-content2-links">
+                                <div class="dropdown-plus">
+                                    <a href="#Products" class="dropbtn2">Products</a>
+                                    <div class="dropdown-content-nested">
+                                        <a href="mens.html">Men</a>
+                                        <a href="Women.html">Women</a>
+                                        <a href="kids.html">Kids</a>
+                                    </div>
+                                </div>
+                                <a href="#philosophy-preview">Philosophy</a>
+                                <a href="#blogs-and-events">Blogs and Events</a>
+                                <a href="#socials">Socials</a>
+                                <a href="#meet-the-team">Meet the A-team</a>
+                                <div class="dropdown-content2-footer">
+                                    <a href="faq.html" class="faq">FAQ</a>
+                                    <a href="#return-policy" class="return">Return Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    <main>
+        <div class="container step_container">
+            <div class="row d-flex align-items-start">
+                <div class="col-lg-2 col-md-2">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        <!-- Steps progress code here -->
+                        <div class="circle visited-circle"><span class="title">1</span></div>
+                        <div class="vertical-line visited-line"></div>
+                        <div class="circle current-circle"><span class="title">2</span></div>
+                        <div class="vertical-line current-line"></div>
+                        <div class="circle"><span class="title">3</span></div>
+                        <div class="vertical-line"></div>
+                        <div class="circle"><span class="title">4</span></div>
+                        <div class="vertical-line-dotted"></div>
+                        <div class="circle-dotted"></div>
+                        <div class="vertical-line-dotted"></div>
+                        <div class="circle-dotted"></div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                    <h3 class="font-weight-bold">Return &amp; Refund Policy for Recycle Shop Apparels</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="customer-name">What is your full name?</label>
+                            <input type="text" id="customer-name" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="order-number">What is your order number?</label>
+                            <input type="text" id="order-number" class="form-control" placeholder="123456">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-name">What is the name of the product you want to return?</label>
+                            <input type="text" id="product-name" class="form-control" placeholder="Product Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="reason-return">What is the reason for the return?</label>
+                            <textarea id="reason-return" class="form-control" placeholder="Describe the reason for the return"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="refund-method">Preferred method of return?</label>
+                            <select id="refund-method" class="form-control">
+                                <option value="">--Please choose an option--</option>
+                                <option value="credit-return">Credit return</option>
+                                <option value="cash-return">Cash return</option>
+                                <option value="exchange-product">Exchange product</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason-refund">What is the reason for the return?</label>
+                            <textarea id="reason-refund" class="form-control" placeholder="Describe the reason for the refund"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>          
+
+    <!-- Footer goes here -->
+    <footer>
+        <div class="footer">
+            <div class="footer-info">
+                <p>No. 7, Jalan Damai, New Hope, PA 18938</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <img src="https://i.imgur.com/RJpESOP.png" alt="Facebook Icon">
+                <img src="https://i.imgur.com/YFBmf3h.png" alt="Twitter Icon">
+                <img src="https://i.imgur.com/h0ixep9.png" alt="Instagram Icon">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Total number of input fields
+        var totalInputs = $('form .form-group input, form .form-group textarea, form .form-group select').length;
+
+        // Listen for changes in the input fields
+        $('form .form-group input, form .form-group textarea, form .form-group select').change(function() {
+            // Count the number of filled input fields
+            var filledInputs = $('form .form-group input:valid, form .form-group textarea:valid, form .form-group select:valid').length;
+
+            // Calculate the progress
+            var progress = (filledInputs / totalInputs) * 100;
+
+            // Update the progress bar
+            $('.progress-bar').css('width', progress + '%');
+        });
+    });
+    </script>
+</body>
+</html>
