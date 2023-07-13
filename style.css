@@ -1,0 +1,1212 @@
+/* Define some CSS variables for colors */
+:root {
+    --primary-color: #333;
+    --secondary-color: #888;
+    --background-color: #f8f8f8;
+    --text-color: #333;
+    --common-padding: 20px;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+header,
+#hero,
+footer {
+    background-color: var(--background-color);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    position: fixed;
+    background-color: transparent;
+    font-family: 'Arial', sans-serif;
+    z-index: 2;
+    width: 100%;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.website-title {
+    flex: 1;
+    display: flex;
+    align-items: left;
+}
+
+.website-title a {
+    font-family: 'Raleway', sans-serif;
+    color: #000; /* Change this to any color you want */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: left;
+    background-color: #f60; /* Add background color */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add border-radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
+
+.website-title a:hover {
+    /* Add hover effects */
+    transform: scale(1.1); /* Increase size on hover */
+    background-color: #f90; /* Change background color on hover */
+    /* Add any other creative hover styles */
+}
+
+.nav-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-left ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+.nav-left ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-left ul li a:hover {
+    color: #ccc;
+}
+
+.nav-icons a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.nav-icons img {
+    height: 20px;
+    width: auto;
+}
+
+.nav-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 40px; /* Add space between elements */
+    justify-content: space-between;
+}
+
+.nav-right ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Dropdown menu style */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown container (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Align the dropdown menu to the right */
+    background-color: rgba(255, 255, 255, 0.8); /*semi - transparent white background */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px; /* Add padding to dropdown menu */
+    animation: fadeIn 0.3s ease-in-out; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change hover color for 'Products' link */
+.nav-right .dropdown:first-child:hover .dropbtn {
+    color: #f60; /* Change to a color of your choice */
+}
+
+/* Change font for 'Products' link */
+.nav-right .dropdown:first-child .dropbtn {
+    font-size: 1.5em; /* font size */
+    font-family: 'Arial', sans-serif; /* font of your choice */
+    color: #000; /* color of your choice */
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #fff;
+    background-color: #f60; /* Change to a color of your choice */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* logo*/
+
+.logo {
+    flex: 1;
+    text-align: center;
+}
+
+.logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.logo img:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Increase size on hover */
+    /* Add any other creative hover styles */
+}
+
+/* Add a dropdown icon */
+.nav-right .dropdown:first-child .dropbtn:after {
+    content: ''; /* no arrow */
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Styles for dropdown2 */
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown2 .dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin-right: 20px;
+}
+
+/* Styles for dropdown-content2 */
+.dropdown-content2 {
+    display: none;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0; /* Set to 0 to start from the top */
+    right: 0; /* Set to 0 to start from the right */
+    width: 25%; /* width of the dropdown content 2 */
+    height: 100%; /* Set to 100% to take full height */
+    background-color: #FFDAB9; 
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px; 
+    animation: fadeIn 0.3s ease-in-out;
+    border: none; 
+    overflow: hidden; /* Add this to enable scrolling if content overflows */
+    align-items: center; /* Align items to the center */
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+
+}
+
+.dropdown-content2 a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #444; /* Added border between links for a more defined look */
+}
+
+.dropdown-content2 a:last-child {
+    border-bottom: none; /* Remove border for the last link */
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.dropdown2 .dropbtn img {
+    width: 24px;
+    height: 24px;
+    border:none;
+}
+
+.btn-only{
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    max-height: 100vh; /* Adjust this value according to your needs */
+}
+
+/* Hover Effects on Links */
+.dropdown-content2-links a:hover {
+    background-color: #f60; /* Or any color you prefer */
+}
+
+/* Styles for dropdown2 menu header */
+.dropdown-content2-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Add some margin below the header */
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+}
+
+.dropdown-content2-header .logo {
+    display: inline-block;
+    flex-shrink: 0; /* Prevent logo from shrinking */
+    width: 30%; /* Set width of logo */
+    position: relative; /* Added to keep logo in place when scrolling */
+    align-self: flex-start; /* Align logo to the left */
+    border: none;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.dropdown-content2-header .logo a {
+    display: inline-block;
+    text-decoration: none; /* Remove underline from the anchor tag */
+}
+
+.dropdown-content2-header .logo a:hover {
+    background-color: transparent; /* Remove background color change on hover */
+}
+
+.dropdown-content2-header .logo img {
+    max-width: 100%; /* Make sure the logo image scales nicely */
+    height: auto;
+    top: 20px;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.dropdown-content2-header .search {
+    flex-grow: 1; /* Allow the search bar to take remaining space */
+    margin-left: 20px; /* Add some space between the logo and search bar */
+    width: 50%; /* Set width of search bar */
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content2-header .search input {
+    width: 100%; /* Make the input take full width of the search bar */
+    padding: 10px; /* Add some padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add some border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add some shadow */
+    font-size: 14px;
+    transition: all 0.3s ease-out;
+}
+
+.dropdown-content2-header .search i {
+    margin-right: 10px; /* Add some space between the search icon and the search bar */
+}
+
+.dropdown-content2-header .search input:focus {
+    border-color: #333; /* Or any color you prefer */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Or any shadow effect you prefer */
+}
+
+/* dropdown-plus inside the dropdown 2 menu */
+
+.dropdown-plus {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #444; /* Added border between links for a more defined look */
+}
+
+.dropdown-plus .dropbtn2::after {
+    content: "-";
+    position: absolute;
+    right: 0;
+}
+
+.dropdown-plus .dropbtn2.minus::after {
+    content: "+";
+}
+
+.dropdown-content-nested {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content-nested a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: none; /* Remove border between links */
+}
+
+.dropdown-plus:hover .dropdown-content-nested {
+    display: block;
+}
+
+.dropdown-content2-footer {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+}
+
+.dropdown-content2-links a:last-child,
+.dropdown-content2-links a:nth-last-child(2) {
+    border-bottom: none;
+}
+
+.dropdown-content2-links a.faq:hover,
+.dropdown-content2-links a.return:hover {
+    background-color: transparent; /* Removes the background color on hover */
+    color: #f90; /* Changes the color of the text on hover */
+}
+
+
+/* live chat styles */
+#live-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f60;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#live-chat:hover {
+    background-color: #f90;
+}
+
+/* Hero section styles */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;  
+    position: relative;
+    height: 100vh; 
+}
+
+#hero h1 {
+    margin-bottom: 20px;
+}
+
+#carousel-wrapper {
+    width: 100%;
+    height: 100%; /* Change this to 100vh */
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#carousel {
+    display: flex;
+    width: calc(100% + 1px); /* Increase width by 1px to prevent subpixel rounding */
+    height: 100%; /* Change this to 100vh */
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Hide overflow to prevent half image visibility */
+}
+
+#carousel figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%; /* For max width*/
+    margin: 0;
+    padding: 0;
+    border: none;
+    scroll-snap-align: start; /* Added scroll-snap-align property */
+}
+
+#carousel img {
+    width: 100%;
+    height: 100vh; /* Change this to 100vh */
+    object-fit: cover;
+    display: block;
+}
+
+#carousel .word {
+    position: absolute;
+    bottom: 200px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 4em;
+    font: 700 normal 2.5em "Open Sans", sans-serif;
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
+    
+}
+
+#carousel-dots {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+#carousel-dots .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+#carousel-dots .dot:hover {
+    background-color: #717171;
+}
+
+#carousel-dots .dot.active {
+    background-color: #717171;
+}
+
+/* Arrows (for navigation) */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--secondary-color);
+}
+
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.next {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+#hero .shop-now {
+    position: absolute;
+    bottom: 80px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); /* Shadow for 3D effect */
+}
+
+#hero .shop-now:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+
+/* Section styles */
+section {
+    padding: 100px 50px; /* Increase padding */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    border-top: 1px solid #ccc; /* Add border-top */
+    border-bottom: 1px solid #ccc; /* Add border-bottom */
+}
+
+.section-content {
+    max-width: 1000px; /* Adjust this value to your liking */
+    margin: 0 auto; /* This will center the content */
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    color: #333;
+    padding: var(--common-padding);
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+}
+
+footer .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    color: #797776;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+
+/* social media icons */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+#carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+#carousel {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Accessibility */
+a:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* Buttons for the slider */
+button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Improve button accessibility */
+button:focus {
+    outline: none;
+}
+
+/* Improve anchor tag accessibility */
+a:focus {
+    outline: none;
+}
+
+/* Improve form input accessibility */
+input:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* Philosophy section styles */
+
+#philosophy-preview {
+    padding: 100px 50px; /* Increase padding */
+    background-color: #f9f9f9; /* Change background color */
+    text-align: center;
+}
+
+.philosophy-content {
+    display: flex;
+    justify-content: space-between; /*center could be it as well*/
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.philosophy-image {
+    order: 1; /* This will make the image appear on the left */
+    flex: 1; /* This will make the image and text take up equal space */
+    max-height: 500px; /* Adjust this value to control the maximum height of the image */
+    overflow: hidden; /* This will crop the image if it exceeds the maximum height */
+}
+
+.philosophy-image img {
+    max-width: 100%;
+    height: auto;
+    /* margin-right: 20px; */
+    object-fit: cover;
+}
+
+.philosophy-text {
+    order: 2; /* This will make the text appear on the right */
+    flex: 1; /* This will make the image and text take up equal space */
+    text-align: center;
+    padding-left: 20px;
+}
+
+.philosophy-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.philosophy-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.philosophy-text a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgb(124, 196, 124);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+    border: none;
+    font-size: 1.2em;
+}
+
+.philosophy-text a:hover {
+    background-color: var(--secondary-color);
+}
+
+philosophy-text a::after {
+    content: " >";
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 600px) {
+    header,
+    section,
+    footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .philosophy-content, .highlight-content {
+        flex-direction: column;
+    }
+
+    .philosophy-image, .highlight-item {
+        margin-bottom: 20px;
+    }
+
+    .philosophy-text, .highlight-item h3, p, a {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+/* Highlights section styles */
+
+#highlights {
+    padding: 50px 100px;
+    background-color: #f2f8f8;
+}
+
+#highlights .container h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f60;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.highlight-content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.highlight-content .highlight-image {
+    flex: 1;
+}
+
+.highlight-content .highlight-text {
+    flex: 1;
+}
+
+.highlight-content-right .highlight-image {
+    order: 2;
+}
+
+.highlight-content-right .highlight-text {
+    order: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.highlight-content-left .highlight-image {
+    order: 1;
+}
+
+.highlight-content-left .highlight-text {
+    order: 2;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.highlight-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    margin-bottom: 10px;
+}
+
+.highlight-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.highlight-item a:hover {
+    color: var(--secondary-color);
+}
+
+.highlight-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.highlight-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .highlight-content {
+        flex-direction: column;
+    }
+}
+
+/* Product Preview Section Styles */
+
+#product-preview {
+    background-image: url('https://i.imgur.com/a9djgnc.jpg'); /* Replace with your image URL */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 150px; /* Adjusted padding for larger section */
+    color: #fff; /* Change text color to dark */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}
+
+#product-preview .container {
+    max-width: 1200px; /* Limit the maximum width */
+    margin: auto; /* Center the container */
+}
+
+#product-preview .container h2 {
+    font-size: 2.5em;
+    color: #f2f8f8;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.product-slider {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 60px; /* Added margin for more space between heading and images */
+}
+
+.product-item {
+    position: relative;
+    flex: 0 0 auto; /* Adjusted for three items per row */
+    margin-right: 40px; /* Top and bottom margin */
+    max-width: 300px; /* Limit maximum width */
+    background: #fff; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Centered text */
+}
+
+.product-item h3 {
+    color: #fff; /* Dark text */
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%; /* Adjusted for proportional image height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.product-item p {
+    color: #f9f9f9; /* Darker text */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.product-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: left;
+    transition: all 0.3s ease;
+    transform: translateY(100%);
+    border-radius: 0 0 10px 10px;
+}
+
+.product-item:hover .product-description {
+    transform: translateY(0);
+}
+
+.btn-shop-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Change button color to white */
+    color: var(--primary-color); /* Change button text color to primary color */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25); /* Shadow for 3D effect */;
+    margin-left: 50%;
+}
+
+.btn-shop-now:hover {
+    background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+    .product-slider {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .product-item {
+    flex: 0 0 100%; /* Full width on small screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #product-preview {
+        padding: 50px; /* Decrease padding for smaller screens */
+    }
+
+    #product-preview .container {
+        padding: 30px; /* Decrease padding for smaller screens */
+    }
+
+    .product-slider {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .product-item {
+        margin-right: 0; /* Remove right margin on smaller screens */
+        margin-bottom: 40px; /* Add bottom margin on smaller screens */
+    }
+
+    .product-item img {
+        height: 200px; /* Decrease image height for smaller screens */
+    }
+}
+
+/* Testimonials Section Styles */
+
+#testimonials {
+    padding: 50px;
+    background-color: #f2f8f8;
+}
+
+#testimonials .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#testimonials h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+#testimonials blockquote {
+    flex: 0 0 calc(33% - 20px);
+    position: relative;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#testimonials blockquote::before {
+    content: "“";
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: var(--primary-color);
+}
+
+#testimonials blockquote::after {
+    content: "”";
+    font-size: 4em;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: var(--primary-color);
+}
+
+#testimonials img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Make the image circular */
+    margin: 20px auto;
+}
+
+#testimonials p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 20px 0;
+}
+
+#testimonials cite {
+    font-size: 1em;
+    color: var(--secondary-color);
+    font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+    #testimonials blockquote {
+        flex: 0 0 100%;
+    }
+}
+
+/* Newsletter signup form */
+
+#newsletter-signup {
+    background-color: #f2f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#newsletter-signup .container {
+    max-width: 600px;
+    margin: auto;
+}
+
+#newsletter-signup h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#newsletter-signup p {
+    font-size: 1em;
+    margin-bottom: 40px;
+}
+
+#newsletter-signup .form-group {
+    margin-bottom: 20px;
+}
+
+#newsletter-signup label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#newsletter-signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#newsletter-signup button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#newsletter-signup button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Style the dots (optional) */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* nav bar media responsiveness */
+
+@media screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right ul li {
+        margin-bottom: 10px;
+    }
+
+    .nav-right ul li a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .dropdown-content, .dropdown-content2 {
+        position: static;
+        width: 100%;
+    }
+
+    .dropdown-content2 {
+        height: auto;
+    }
+
+    .dropdown-content2-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown-content2-header .search {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .dropdown-content2-header .search input {
+        width: 100%;
+    }
+}
+
+
+
+
