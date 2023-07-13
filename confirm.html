@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <meta charset="UTF-8">
+  
+  <style>
+
+    
+    body {
+      background-color: #f8f8f8;
+      margin: 0%;
+    }
+
+    .container-fluid {
+      background-color: #e6d0d0;
+    }
+
+    .navbar {
+      background-color: #b0b0b0;
+      border-color: transparent;
+    }
+
+    .navbar-brand {
+      color: black;
+    }
+
+    .navbar-nav > li > a {
+      color: #333;
+    }
+
+    p{
+      color: #ccc;
+    }
+
+    h1{
+      color: #333;
+      margin-top: 100px;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    
+    /* Box styles */
+    .info-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      
+    }
+
+    .info-box label {
+      font-weight: bold;
+    }
+
+    .info-box span {
+      display: block;
+    }
+
+    /* Mobile size adjustments */
+    @media only screen and (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index007.html">RecycleShop</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index007.html"><span>&#9851;</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Your order has been accepted</h1>
+    <b>The product will be Shipped within 2-3 days, excluding Saturdays, Sundays and public holidays!</b>
+    <p id="ss">You can go back to Home by clicking icon</p>
+    <span is="type-async" id="type-text"><b>...</b></span>
+    <span class="blinking-cursor"><b>_</b></span>
+
+    <div class="info-box">
+      <label><b>Price</b></label>
+      <span id="priceResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label><b>Quantity</b></label>
+      <span id="quantityResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label><b>Size</b></label>
+      <span id="sizeResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label><b>Color</b></label>
+      <span id="colorResult"></span>
+    </div>
+    
+    <h3>Input Results:</h3>
+    
+    <div class="info-box">
+      <label>Usr:</label>
+      <span id="usrResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>fname:</label>
+      <span id="fnameResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>email:</label>
+      <span id="emailResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>adr:</label>
+      <span id="adrResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>city:</label>
+      <span id="cityResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>state:</label>
+      <span id="stateResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>zip:</label>
+      <span id="zipResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>Card Number:</label>
+      <span id="cardNumberResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>Cardholder:</label>
+      <span id="cardholderResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>Expiration Date:</label>
+      <span id="expirationDateResult"></span>
+    </div>
+    
+    <div class="info-box">
+      <label>CVC:</label>
+      <span id="cvcResult"></span>
+    </div>
+
+
+
+    <script>
+      // Retrieve the URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      const usr = urlParams.get('usr');
+      const fname = urlParams.get('fname');
+      const email = urlParams.get('email');
+      const adr = urlParams.get('adr');
+      const city = urlParams.get('city');
+      const state = urlParams.get('state');
+      const zip = urlParams.get('zip');
+      const cardNumberPart1 = urlParams.get('card-number-part1');
+      const cardNumberPart2 = urlParams.get('card-number-part2');
+      const cardNumberPart3 = urlParams.get('card-number-part3');
+      const cardNumberPart4 = urlParams.get('card-number-part4');
+      const cardholder = urlParams.get('cardholder');
+      const month = urlParams.get('month');
+      const year = urlParams.get('year');
+      const cvc = urlParams.get('cvc');
+      const price = urlParams.get('price');
+      const quantity = urlParams.get('quantity');
+      const size = urlParams.get('size');
+      const color = urlParams.get('color');
+  
+      // Display the input information
+      document.getElementById("usrResult").textContent = usr;
+      document.getElementById("fnameResult").textContent = fname;
+      document.getElementById("emailResult").textContent = email;
+      document.getElementById("adrResult").textContent = adr;
+      document.getElementById("cityResult").textContent = city;
+      document.getElementById("stateResult").textContent = state;
+      document.getElementById("zipResult").textContent = zip;
+      document.getElementById("cardNumberResult").textContent = `${cardNumberPart1}-${cardNumberPart2}-${cardNumberPart3}-${cardNumberPart4}`;
+      document.getElementById("cardholderResult").textContent = cardholder;
+      document.getElementById("expirationDateResult").textContent = `${month}/${year}`;
+      document.getElementById("cvcResult").textContent = cvc;
+      document.getElementById("priceResult").textContent = price;
+      document.getElementById("quantityResult").textContent = quantity;
+      document.getElementById("sizeResult").textContent = size;
+      document.getElementById("colorResult").textContent = color;
+  </script>
+  
+    
+  <script>
+    async function init () {
+  const node = document.querySelector("#type-text")
+  
+  await sleep(1000)
+  node.innerText = ""
+  await node.type('Thank, ')
+  
+  while (true) {
+    await node.type('you!')
+    await sleep(2000)
+    await node.delete('you!')
+    await node.type('you for shopping!')
+    await sleep(2000)
+    await node.delete('you for shopping!')
+  }
+}
+
+
+// Source code 🚩
+
+const sleep = time => new Promise(resolve => setTimeout(resolve, time))
+
+class TypeAsync extends HTMLSpanElement {
+  get typeInterval () {
+    const randomMs = 100 * Math.random()
+    return randomMs < 50 ? 10 : randomMs
+  }
+  
+  async type (text) {
+    for (let character of text) {
+      this.innerText += character
+      await sleep(this.typeInterval)
+    }
+  }
+  
+  async delete (text) {
+    for (let character of text) {
+      this.innerText = this.innerText.slice(0, this.innerText.length -1)
+      await sleep(this.typeInterval)
+    }
+  }
+}
+
+customElements.define('type-async', TypeAsync, { extends: 'span' })
+
+
+init()
+
+  </script>
+  </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <type-async></type-async>
+
+</body>
+</html>
