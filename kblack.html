@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>The Recycle Shop</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cartpage2.css">
+</head>
+
+    
+
+  <header>
+    <div class="nav-container">
+        <div class="website-title">
+            <a href="index007.html"> The Recycle Shop </a>
+        </div>
+        <div class="logo">
+            <a href="index007.html"><img src="https://i.imgur.com/KSsjSOY.png" alt="Your Company Logo"></a>
+        </div>
+        <nav class="nav-right">
+            <ul>
+                <li class="dropdown">
+                    <a href="Product.html" class="dropbtn">PRODUCTS</a>
+                    <div class="dropdown-content">
+                        <a href="mens.html">Men</a>
+                        <a href="Women.html">Women</a>
+                        <a href="kids.html">Kids</a>
+                    </div>
+                </li>
+                <li><a href="login2.html"><img src="https://i.imgur.com/RdDOJUj.png" alt="Account"></a></li>
+                <li><a href="cart2.html"><img src="https://i.imgur.com/MD4bWil.png" alt="Shopping Cart"></a></li>
+                <li class="dropdown2">
+                    <button class="dropbtn">
+                        <img src="https://i.imgur.com/wjydCtq.png" alt="Menu">
+                    </button>
+                    <div class="dropdown-content2">
+                        <div class="dropdown-content2-header">
+                            <a href="index007.html" class="logo">
+                                <img src="https://i.imgur.com/KSsjSOY.png" alt="Your Company Logo">
+                            </a>
+                            <div class="search">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search...">
+                            </div>
+                        </div>
+                        <div class="dropdown-content2-links">
+                            <a href="about.htnl">Philosophy</a>
+                            <a href="blog.html">Blogs and Events</a>
+                            <a href="contact.html">Socials</a>
+                            <a href="us.html">Meet the A-team</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav> 
+    </div>
+</header>          
+<body>
+  <main>
+    <div id="item" class="wrapper">
+      <div class="item-image">
+        <img src="https://i.imgur.com/HJSdyWq.jpg" alt="" id="img1">
+      </div>
+
+      <div class="item-info">
+        <h1 class="item-title">TCotton T-Shirt - Black</h1>
+        <p>this is the t-shirt created by Nakib</p>
+        <p class="price" id="product-price">$45</p>
+
+        <table class="order-table">
+
+          <thead>
+            <tr>
+              <th class="color">Color</th>
+              <th class="size">Size</th>
+              <th class="quantity"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <select id="color" name="color">
+                  <option value="Black">Black</option>
+                  
+                </select>
+              </td>
+              <td>
+                <select id="size" name="size">
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                </select>
+              </td>
+              <td>
+                <select id="quantity" name="quantity" onchange="updatePrice()"> <!-- Added onchange attribute -->
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button class="cart-btn" type="submit" onclick="submitForm()">ADD TO CART</button>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="cart2.js"></script>
+        <script>
+                  function submitForm() {
+          const price = document.getElementById("product-price").textContent;
+          const quantity = document.getElementById("quantity").value;
+          const size = document.getElementById("size").value;
+          const color = document.getElementById("color").value;
+
+          // Store cart data in local storage
+          localStorage.setItem("cartPrice", price);
+          localStorage.setItem("cartQuantity", quantity);
+          localStorage.setItem("cartSize", size);
+          localStorage.setItem("cartColor", color);
+
+          // Redirect to cart2.html
+          window.location.href = "cart2.html";
+        }
+
+
+function updatePrice() {
+  const quantity = document.getElementById("quantity").value;
+  let price = document.getElementById("product-price").textContent;
+  price = price.replace("$", ""); // Remove the "$" prefix
+  const totalPrice = parseFloat(price) * parseInt(quantity);
+  document.getElementById("product-price").textContent = "$" + totalPrice.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>

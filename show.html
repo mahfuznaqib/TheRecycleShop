@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Input Results</title>
+</head>
+<body>
+  <h2>Input Results</h2>
+
+  <h3>Sign Up:</h3>
+  <div>
+    <p>Name: <span id="nameResult"></span></p>
+    <p>Email: <span id="emailResult"></span></p>
+    <p>Password: <span id="passwordResult"></span></p>
+  </div>
+
+  <h3>Sign In:</h3>
+  <div>
+    <p>Email: <span id="signInEmailResult"></span></p>
+    <p>Password: <span id="signInPasswordResult"></span></p>
+  </div>
+
+  <style>
+    body {
+      background-color: #e6d7e6;
+      padding: 20px;
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    div {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    // Retrieve the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const email = urlParams.get('email');
+    const password = urlParams.get('password');
+    const signInEmail = urlParams.get('signInEmail');
+    const signInPassword = urlParams.get('signInPassword');
+
+    // Display the input information
+    document.getElementById("nameResult").textContent = name;
+    document.getElementById("emailResult").textContent = email;
+    document.getElementById("passwordResult").textContent = password;
+    document.getElementById("signInEmailResult").textContent = signInEmail;
+    document.getElementById("signInPasswordResult").textContent = signInPassword;
+  </script>
+</body>
+</html>

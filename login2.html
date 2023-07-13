@@ -1,0 +1,72 @@
+<html>
+  <header>
+    <div class="nav-container">
+        <div class="website-title">
+            <a href="index007.html"> The Recycle Shop </a>
+        </div>
+        <div class="logo">
+            <a href="index007.html"><img src="https://i.imgur.com/KSsjSOY.png" alt="Your Company Logo"></a>
+        </div>
+
+    </div>
+</header>            
+
+ 
+  <link rel="stylesheet" href="login2.css">
+</head>
+
+
+
+
+
+<body>
+
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="show.html" method="get" onsubmit="return validateSignUpForm()">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="facebook"></i></a>
+          <a href="#" class="social"><i class="google"></i></a>
+     
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" placeholder="Name" name="name" id="name" />
+        <input type="email" placeholder="Email" name="email" id="email" />
+        <input type="password" placeholder="Password" name="password" id="password" />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="show.html" method="get" onsubmit="return validateSignInForm()">
+        <h1>Sign in</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="facebook"></i></a>
+          <a href="#" class="social"><i class="google"></i></a>
+     
+        </div>
+        <span>or use your account</span>
+        <input type="email" placeholder="Email" name="signInEmail" id="signInEmail" />
+        <input type="password" placeholder="Password" name="signInPassword" id="signInPassword" />
+        <a href="#">Forgot your password?</a>
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>please login with your personal info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter the personal details</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="login2.js"></script>
+  </body>
+</html>
