@@ -1,0 +1,31 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+.wip-container {
+    text-align: center;
+    padding-top: 20%;
+}
+
+.wip-logo {
+    width: 200px;
+    height: auto;
+}
+
+.wip-title {
+    font-size: 2em;
+    color: #333;
+}
+
+.wip-animation p {
+    font-size: 1.2em;
+    color: #666;
+    animation: fadeInOut 2s infinite ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
