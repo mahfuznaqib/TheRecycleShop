@@ -3,9 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="check2.1.css">
-  <link rel="icon" href="recycle.ico" type="image/x-icon">
   <meta charset="UTF-8">
-  <title>Checkout</title>
+  <title>Check2</title>
 </head>
 
 <body>
@@ -14,7 +13,6 @@
       
       <div id="right-col">
         <h2>Payment</h2>
-        <p>*Please make sure you fill in every infomation!</p>
         <div id="logotype">
           <img id="mastercard" src="pngegg.png" alt="" />
           <label for="card-type">Card Type</label>
@@ -106,6 +104,8 @@
             <p>Size: ${size}</p>
             <p>Color: ${color}</p>
           `;
+
+         
         
           function redirectToConfirm() {
             var cardNumberPart1 = document.getElementById('card-number-part1').value;
@@ -116,11 +116,18 @@
             var month = document.getElementById('month').value;
             var year = document.getElementById('year').value;
             var cvc = document.getElementById('cvc').value;
+
+            if (!cardNumberPart1 || !cardNumberPart2 || !cardNumberPart3 || !cardNumberPart4 || !cardholder || !month || !year || !cvc) {
+              alert('Please fill in all required fields before continuing.');
+              return;
+            }
         
             // Redirect to confirm.html with all the parameters
             var redirectUrl = `confirm.html?usr=${usr}&fname=${fname}&email=${email}&adr=${adr}&city=${city}&state=${state}&zip=${zip}&price=${price}&quantity=${quantity}&size=${size}&color=${color}&card-number-part1=${cardNumberPart1}&card-number-part2=${cardNumberPart2}&card-number-part3=${cardNumberPart3}&card-number-part4=${cardNumberPart4}&cardholder=${cardholder}&month=${month}&year=${year}&cvc=${cvc}`;
             window.location.href = redirectUrl;
           }
+
+
         </script>
         
  
