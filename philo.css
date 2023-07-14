@@ -90,6 +90,15 @@ body {
     color: #ccc; /* Lighter hover color */
 }
 
+.philosophy-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #fff;
+    text-align: left;
+    font-family: 'Helvetica', sans-serif; /* Update the font family */
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
 .philosophy-text, .process-text, .commitment-text {
     font-size: 1.2em;
     line-height: 1.6;
