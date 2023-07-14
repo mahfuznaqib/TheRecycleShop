@@ -164,7 +164,7 @@
             var progress = (filledInputs / totalInputs) * 100;
 
             // Update the progress bar
-            $('.progress-bar').css('width', progress + '%');
+            $('.progress-bar').css('width', progress + '%').attr('aria-valuenow', progress);
         });
     });
     </script>

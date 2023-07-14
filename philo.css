@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #222 !important;
+    background-color: #333 !important; /* Darker background color */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.philosophy-container, .process-container, .commitment-container {
+    margin-top: 50px;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.philosophy-container {
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.process-container {
+    animation: slideIn 2s ease-in forwards;
+}
+
+.commitment-container {
+    animation: zoomIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.philosophy-title, .philosophy-subtitle {
+    width: 100%;
+}
+
+.philosophy-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff; /* Lighter text color */
+    font-weight: 700;
+    transition: color 0.5s ease-in-out;
+}
+
+.philosophy-title:hover {
+    color: #ccc; /* Lighter hover color */
+}
+
+.philosophy-subtitle {
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #fff; /* Lighter text color */
+    font-weight: 700;
+    transition: color 0.5s ease-in-out;
+}
+
+.philosophy-subtitle:hover {
+    color: #ccc; /* Lighter hover color */
+}
+
+.philosophy-text, .process-text, .commitment-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #fff; /* Lighter text color */
+    flex: 1 0 60%; /* Flex sizing for text */
+    margin-right: 20px;
+}
+
+.philosophy-image, .process-image, .commitment-image {
+    width: 35%; /* Flex sizing for images */
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: transform 0.5s ease-in-out;
+    flex: 1 0 35%;
+}
+
+.philosophy-image:hover, .process-image:hover, .commitment-image:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 video */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .philosophy-container, .process-container, .commitment-container {
+        margin-top: 80px;
+    }
+
+    .philosophy-title {
+        font-size: 3em;
+    }
+
+    .philosophy-subtitle {
+        font-size: 2.5em;
+    }
+
+    .philosophy-text, .process-text, .commitment-text {
+        font-size: 1.4em;
+    }
+}
