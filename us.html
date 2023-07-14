@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      rgba(16, 16, 16, 0.8),
+      rgba(16, 16, 16, 0.8)
+    ),
+    url(https://st4.depositphotos.com/1026550/22173/i/450/depositphotos_221736034-stock-photo-close-up-of-senior-hands.jpg);
+  background-size: cover;
+}
+
+p {
+  margin: 0em 5em 4em 5em;
+}
+
+h1, p {
+  text-align: left;
+  line-height: 1.8;
+  font-family: Lora, serif;
+}
+
+.glowIn {
+  color: white;
+}
+
+.glowIn span {
+  animation: glow-in 0.8s both;
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 25px white;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+</style>
+</head>
+<body>
+<h1 class="glowIn">Hello We Are The Four Horsemen</h1>
+<p class="glowIn">OI would now like to introduce our team members.
+     Member number 1 Naqib. member number 2 Amir. member number 3 Naevin. member number 4 Jou. </p>
+
+<script>
+    let glowInTexts = document.querySelectorAll(".glowIn");
+glowInTexts.forEach(glowInText => {
+  let letters = glowInText.textContent.split("");
+  glowInText.textContent = "";
+  letters.forEach((letter, i) => {
+    let span = document.createElement("span");
+    span.textContent = letter;
+    span.style.animationDelay = `${i * 0.08}s`;
+    glowInText.append(span);
+  });
+});
+</script>
+
+</body>
+</html>
+
