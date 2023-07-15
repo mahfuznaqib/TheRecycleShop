@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Recycle Shop</title>
-        <meta name="description" content="Your website description">
-        <meta name="keywords" content="Your,Website,Keywords">
-        <meta name="author" content="Your Name">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-        <link rel="icon" href="recycle.ico" type="image/x-icon">
-    </head>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Recycle Shop</title>
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="Your,Website,Keywords">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="icon" href="recycle.ico" type="image/x-icon">
+    <style>
+        .live-chat {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f60;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 0;
+        }
+    </style>
+</head>    
 <body>
     <main>
         <section id="hero">
@@ -86,23 +98,35 @@
                     <figure>
                         <img src="https://i.imgur.com/9sZE8yf.jpg" alt="Nature's Piece">
                         <figcaption class="word"> Disaster on the horizon </figcaption>
-                        <button class="prev" type="button">&#8592;</button>
-                        <button class="next" type="button">&#8594;</button>
-                        <a href="philosophy.html" class="shop-now">Read More</a>
+                        <div>
+                            <button class="prev" type="button">&#8592;</button>
+                            <button class="next" type="button">&#8594;</button>
+                        </div>
+                        <div>
+                            <a href="philosophy.html" class="shop-now">Read More</a>
+                        </div>
                     </figure>
                     <figure>
                         <img src="https://i.imgur.com/M6vTXpL.jpg" alt="Product Photos">
                         <figcaption class="word">Sustainable Choices: Our Eco-Friendly Products</figcaption>
-                        <button class="prev" type="button">&#8592;</button>
-                        <button class="next" type="button">&#8594;</button>
-                        <a href="Product.html" class="shop-now">Shop Now</a>
+                        <div>
+                            <button class="prev" type="button">&#8592;</button>
+                            <button class="next" type="button">&#8594;</button>
+                        </div>
+                        <div>
+                            <a href="philosophy.html" class="shop-now">Read More</a>
+                        </div>
                     </figure>
                     <figure>
                         <img src="https://i.imgur.com/buzL0QA.jpg" alt="Join the movement">
                         <figcaption class="word">Join the Movement: Help Us Save the Earth</figcaption>
-                        <button class="prev" type="button">&#8592;</button>
-                        <button class="next" type="button">&#8594;</button>
-                        <a href="blog.html" class="shop-now">Join Us</a>
+                        <div>
+                            <button class="prev" type="button">&#8592;</button>
+                            <button class="next" type="button">&#8594;</button>
+                        </div>
+                        <div>
+                            <a href="philosophy.html" class="shop-now">Read More</a>
+                        </div>
                     </figure>
                 </div>
             </div>
@@ -114,16 +138,17 @@
         </section>
     
         <section id="philosophy-preview">
-        <div class="section-content">
-            <div class="container">
-                <div class="philosophy-content">
-                    <div class="philosophy-image">
-                        <img src="https://i.imgur.com/qMCIgCb.jpg" alt="Philosophy Image">
-                    </div>
-                    <div class="philosophy-text">
-                        <h2> PHILOSOPHY </h2>
-                        <p>Our company believes in providing high-quality reused and recycled fabric and apparels that are environmentally friendly and ethically made.</p>
-                        <a href="philosophy.html" class="btn-learn-more">MORE</a>
+            <div class="section-content">
+                <div class="container">
+                    <div class="philosophy-content">
+                        <div class="philosophy-image">
+                            <img src="https://i.imgur.com/qMCIgCb.jpg" alt="Philosophy Image">
+                        </div>
+                        <div class="philosophy-text">
+                            <h2> PHILOSOPHY </h2>
+                            <p>Our company believes in providing high-quality reused and recycled fabric and apparels that are environmentally friendly and ethically made.</p>
+                            <a href="philosophy.html" class="btn-learn-more">MORE</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -370,19 +395,5 @@
         });
         
     </script>
-    
-    <style>
-            .live-chat {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background-color: #f60;
-                color: #fff;
-                cursor: pointer;
-                padding: 10px;
-                z-index: 0;
-            }
-    </style>
-
 </body>
 </html>
