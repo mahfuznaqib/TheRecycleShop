@@ -1,7 +1,6 @@
 <!DOCTYPE html> 
-<html>
+<html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Recycle Shop - Women's</title>
@@ -82,7 +81,7 @@
     <div class="product-container">
         <div class="product">
             <div class="product-image">
-                <img src="https://i.imgur.com/3ZBxc8l.jpg">
+                <img src="https://i.imgur.com/3ZBxc8l.jpg" alt="Green Women's T-Shirt">
             </div>
             <div class="product-info">
                 <h1>Recycled Cotton T-Shirt - Green</h1>
@@ -94,7 +93,7 @@
 
         <div class="product">
             <div class="product-image">
-                <img src="https://i.imgur.com/9uNfBJ1.jpg">
+                <img src="https://i.imgur.com/9uNfBJ1.jpg" alt="Red Women's T-shirt">
             </div>
             <div class="product-info">
                 <h1>Recycled Cotton T-Shirt - Red</h1>
@@ -106,7 +105,7 @@
 
         <div class="product">
             <div class="product-image">
-                <img src="https://i.imgur.com/5GbyqL4.jpg">
+                <img src="https://i.imgur.com/5GbyqL4.jpg" alt="Black Women's T-shirt">
             </div>
             <div class="product-info">
                 <h1>Recycled Cotton T-Shirt - Black</h1>
@@ -118,7 +117,7 @@
 
         <div class="product">
           <div class="product-image">
-              <img src="https://i.imgur.com/6UqSKto.jpg">
+              <img src="https://i.imgur.com/6UqSKto.jpg" alt="Light Blue T-shirt">
           </div>
           <div class="product-info">
               <h1>Recycled Cotton T-Shirt - Light Blue</h1>
@@ -128,47 +127,43 @@
           </div>
       </div>
     </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-info">
+                <p>No. 7, Jalan Damai</p>
+                <p>New Hope, PA 18938</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <img src="https://i.imgur.com/RJpESOP.png" alt="Facebook Icon">
+                <img src="https://i.imgur.com/YFBmf3h.png" alt="Twitter Icon">
+                <img src="https://i.imgur.com/h0ixep9.png" alt="Instagram Icon">
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // navbar.js
+    $(document).ready(function() {
+        // Add event listener for dropdown button
+        $('.dropbtn').on('click', function() {
+            $('#dropdown-menu').toggleClass('show');
+        });
 
+        // Add the dropdown menu function here
+        $('.dropdown-plus .dropbtn2').on('click', function(e) {
+            e.preventDefault();
+            $(this).next('.dropdown-content-nested').slideToggle();
+            $(this).toggleClass('minus'); // Toggle the 'minus' class
+        });
+    });
 
-    <!-- Repeat the above div for each product -->
-
+    </script>
 </body>
-<footer>
-    <div class="footer">
-        <div class="footer-info">
-            <p>No. 7, Jalan Damai</p>
-            <p>New Hope, PA 18938</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <div class="social-icons">
-            <img src="https://i.imgur.com/RJpESOP.png" alt="Facebook Icon">
-            <img src="https://i.imgur.com/YFBmf3h.png" alt="Twitter Icon">
-            <img src="https://i.imgur.com/h0ixep9.png" alt="Instagram Icon">
-        </div>
-    </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    // navbar.js
-$(document).ready(function() {
-    // Add event listener for dropdown button
-    $('.dropbtn').on('click', function() {
-        $('#dropdown-menu').toggleClass('show');
-    });
-
-    // Add the dropdown menu function here
-    $('.dropdown-plus .dropbtn2').on('click', function(e) {
-        e.preventDefault();
-        $(this).next('.dropdown-content-nested').slideToggle();
-        $(this).toggleClass('minus'); // Toggle the 'minus' class
-    });
-});
-
-</script>
 </html>
