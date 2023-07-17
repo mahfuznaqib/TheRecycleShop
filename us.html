@@ -26,6 +26,7 @@ h1, p {
   text-align: left;
   line-height: 1.8;
   font-family: Lora, serif;
+  color: white;
 }
 
 .glowIn {
@@ -51,12 +52,44 @@ h1, p {
     opacity: 0.7;
   }
 }
+
+.team-list li strong {
+  color: white;
+}
+
+.team-list li span.task {
+  color: white;
+}
+
 </style>
 </head>
 <body>
-<h1 class="glowIn">Hello We Are The Four Horsemen</h1>
-<p class="glowIn">OI would now like to introduce our team members.
-     Member number 1 Naqib. member number 2 Amir. member number 3 Naevin. member number 4 Jou. </p>
+<h1 class="glowIn">Hello, We Are The Four Horsemen</h1>
+<p class="glowIn">Allow us to introduce our team members:</p>
+
+<ul class="team-list">
+  <li>
+    <strong>Naqib</strong>
+    <span class="task"> - Fearless Leader</span>
+    <p>Naqib is responsible for overseeing the project and ensuring its successful completion. With his excellent organizational skills and leadership abilities, he manages the team effectively and keeps the project on track.</p>
+  </li>
+  <li>
+    <strong>Amir</strong>
+    <span class="task"> - Pixel Meister</span>
+    <p>Amir is a talented designer who brings creativity and innovation to our projects. He has an eye for aesthetics and focuses on creating visually appealing and user-friendly designs that align with our clients' requirements.</p>
+  </li>
+  <li>
+    <strong>Naevin</strong>
+    <span class="task"> - Text Master</span>
+    <p>Naevin is a skilled developer who turns our design concepts into functional websites and applications. With expertise in various programming languages and frameworks, he ensures that our projects are built with quality code and meet the highest standards.</p>
+  </li>
+  <li>
+    <strong>Jou</strong>
+    <span class="task"> - Design Guru</span>
+    <p>Jou is our marketing guru who strategizes and executes effective marketing campaigns. With her deep understanding of target audiences and market trends, she helps promote our products and services, driving growth and engagement for our business.</p>
+  </li>
+</ul>
+
 
 <script>
     let glowInTexts = document.querySelectorAll(".glowIn");
@@ -74,4 +107,3 @@ glowInTexts.forEach(glowInText => {
 
 </body>
 </html>
-
